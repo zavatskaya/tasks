@@ -5,6 +5,10 @@ func RentalCarCost(_ days: Int) -> Int {
     return (days * 40 - discount)
 }
 
+func test() {
+    
+}
+
 
 
 
