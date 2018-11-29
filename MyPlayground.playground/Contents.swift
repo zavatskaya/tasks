@@ -6,7 +6,7 @@ func RentalCarCost(_ days: Int) -> Int {
 }
 
 func test() {
-    
+    print("Hello")
 }
 
 
