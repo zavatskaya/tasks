@@ -1,16 +1,18 @@
 import UIKit
 
-func RentalCarCost(_ days: Int) -> Int {
-    let discount = days <= 2 ? 0 : days <= 6 ? 20 : 50
-    return (days * 40 - discount)
+
+/* Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 integers. No floats or empty arrays will be passed.
+ 
+ For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+ 
+ [10, 343445353, 3453445, 3453545353453] should return 3453455. */
+
+func sumOfTwoSmallestIntegersIn(_ array: [Int]) -> Int {
+    let sortedArray = array.sorted()
+    return (sortedArray[0] + sortedArray[1])
 }
 
-func test() {
-    print("Hello")
-}
-
-
-
+sumOfTwoSmallestIntegersIn ([19, 5, 42, 2, 77])
 
 
 /* typealias Chessman = [String: (alpha:Character, num:Int)?]
