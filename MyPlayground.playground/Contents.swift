@@ -1,18 +1,29 @@
 import UIKit
 
 
+/* Create a function (or write a script in Shell) that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.*/
+
+func evenOrOdd(_ number:Int) -> String {
+    let str: String = (number % 2 == 0) ? "even" : "odd"
+    return str
+}
+
+evenOrOdd (35)
+
+
+
 /* Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 integers. No floats or empty arrays will be passed.
  
  For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
  
- [10, 343445353, 3453445, 3453545353453] should return 3453455. */
+ [10, 343445353, 3453445, 3453545353453] should return 3453455.
 
 func sumOfTwoSmallestIntegersIn(_ array: [Int]) -> Int {
     let sortedArray = array.sorted()
     return (sortedArray[0] + sortedArray[1])
 }
 
-sumOfTwoSmallestIntegersIn ([19, 5, 42, 2, 77])
+sumOfTwoSmallestIntegersIn ([19, 5, 42, 2, 77])*/
 
 
 /* typealias Chessman = [String: (alpha:Character, num:Int)?]
