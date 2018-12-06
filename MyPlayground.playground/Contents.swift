@@ -1,5 +1,59 @@
 import UIKit
 
+
+
+
+
+
+
+
+/*https://www.codewars.com/kata/52fb87703c1351ebd200081f
+func whatCentury(_ year: String) -> String {
+    var y = Double(year)!
+    y = y / 100
+    y.round(.awayFromZero)
+    let n = Int(y)
+    
+    return n == 13 || n == 15 || n == 12 || n == 11 ? String(n) + "th" : n % 10 == 3 ? String(n) + "rd" : n % 10 == 2 ? String(n) + "nd" : n % 10 == 1 ? String(n) + "st" : String(n) + "th"
+    
+}
+whatCentury("1234")*/
+
+/*https://www.codewars.com/kata/56a5d994ac971f1ac500003e
+
+func longestConsec(_ strarr: [String], _ k: Int) -> String {
+    if (strarr.count <= 0 || k <= 0) {
+        return ""
+    }
+    let array = strarr
+    var sotredArr = array.sorted() { $0.characters.count > $1.characters.count}
+    var n = ""
+    for i in 0...k-1 {
+        n += sotredArr[0]
+        sotredArr.remove(at: 0)
+    }
+    return n
+}
+
+longestConsec(["ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh"], 1)*/
+
+
+//  if let n = arr.max(by: {$1.count > $0.count}){print(n)}
+
+/* https://www.codewars.com/kata/fizz-buzz-cuckoo-clock
+
+func fizzBuzzCuckooClock(_ time: String) -> String {
+    var arr = time.components(separatedBy: ":")
+    var hours = Int(arr[0])
+    let minutes = Int(arr[1])
+    hours! = hours! > 12 ? hours! - 12 : hours! == 0 ? 12 : hours!
+    var cuckoo = String(repeating: "Cuckoo ", count: hours!)
+    cuckoo = String(cuckoo.characters.dropLast())
+    return minutes! == 00 ? cuckoo : minutes! == 30 ? "Cuckoo" : minutes! % 3 == 0 && minutes! % 5 == 0 ? "Fizz Buzz" : minutes! % 3 == 0  ? "Fizz" : minutes! % 5 == 0 ? "Buzz" : "tick"
+}
+fizzBuzzCuckooClock ("00:17")
+ */
+
 /* John wants to decorate a room with wallpaper. He has been said that making sure he has the right amount of wallpaper is more complex than it sounds. He wants a fool-proof method to getting it right.
 John knows that the rectangular room has a length of l meters, a width of w meters, a height of h meters. The standard width of the rolls he wants to buy is 52 centimeters. The length of a roll is 10 meters. He bears in mind however, that it’s best to have an extra length of wallpaper handy in case of mistakes or miscalculations so he wants to buy a length 15% greater than the one he needs.
 Last time he did these calculations he caught a headache so could you help John? Your function wallpaper(l, w, h) should return as a plain English word in lower case the number of rolls he must buy.
@@ -7,7 +61,7 @@ Last time he did these calculations he caught a headache so could you help John?
 #Notes:
 all rolls (even with incomplete width) are put edge to edge
 0 <= l, w, h (floating numbers), it can happens that w x h x l is zero
-the integer r (number of rolls) will always be less or equal to 20*/
+the integer r (number of rolls) will always be less or equal to 20
 
 func wallpaper(_ l: Double, _  w: Double,_  h: Double) -> String {
     
@@ -19,7 +73,7 @@ func wallpaper(_ l: Double, _  w: Double,_  h: Double) -> String {
     return l*w*h == 0 ? "zero" : numbers[Int((l * 2 + w * 2) / 0.52 * h / 10 * 1.15) + 1]
 }
 
-wallpaper(6.1,2.0 ,3.15)
+wallpaper(6.1,2.0 ,3.15)*/
 
 /* Create a function (or write a script in Shell) that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
 
