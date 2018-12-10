@@ -1,6 +1,9 @@
 import UIKit
 
-print("Hello")
+enum e1 {
+    case q1
+    case q2
+}
 
 
 
