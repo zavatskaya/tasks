@@ -1,34 +1,51 @@
 import UIKit
 
 
-
-enum ChessmanType {
-    case king
-    case castle
-    case bishop
-    case pawn
-    case knight
-    case queen
-}
-
-enum ChessmanColor {
-    case black
-    case white
-}
-
 class Chessman {
+    enum ChessmanType {
+        case king
+        case castle
+        case bishop
+        case pawn
+        case knight
+        case queen
+    }
+    
+    enum ChessmanColor {
+        case black
+        case white
+    }
+    
     let type: ChessmanType
     let color: ChessmanColor
     var coordinates: (String, Int)? = nil
     let figureSymbol: Character
+    
     init(type: ChessmanType, color: ChessmanColor, figure: Character){
         self.type = type
         self.color = color
         self.figureSymbol = figure
-        print(color, type, figure)
+    }
+    
+    init(type: ChessmanType, color: ChessmanColor, figure: Character, coordinates: (String, Int)){
+        self.type = type
+        self.color = color
+        self.figureSymbol = figure
+        self.setCoordinates(char: coordinates.0, num: coordinates.1)
+    }
+
+    func setCoordinates(char c:String, num n: Int){
+        self.coordinates = (c, n)
+        print("coordinates of \(color) \(type) are \(c):\(n)" )
+    }
+
+    func kill(){
+        self.coordinates = nil
+        print("\(color) \(type) is killed")
     }
 }
-var kingWhite = Chessman(type: .king, color: .white, figure: "s")
+var kingWhite = Chessman(type: .king, color: .white, figure: "s", coordinates: ("A", 7))
+kingWhite.kill()
 
 
 
