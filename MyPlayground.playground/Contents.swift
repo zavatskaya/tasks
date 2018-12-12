@@ -1,14 +1,34 @@
 import UIKit
 
-struct PlayerInChess {
-    var name: String
-    var wins: UInt
-    func description(){
-        print("Игрок \(self.name) имеет \(self.wins) побед")
+
+
+enum ChessmanType {
+    case king
+    case castle
+    case bishop
+    case pawn
+    case knight
+    case queen
+}
+
+enum ChessmanColor {
+    case black
+    case white
+}
+
+class Chessman {
+    let type: ChessmanType
+    let color: ChessmanColor
+    var coordinates: (String, Int)? = nil
+    let figureSymbol: Character
+    init(type: ChessmanType, color: ChessmanColor, figure: Character){
+        self.type = type
+        self.color = color
+        self.figureSymbol = figure
+        print(color, type, figure)
     }
 }
-var oleg = PlayerInChess(name: "Олег", wins: 15)
-oleg.description()
+var kingWhite = Chessman(type: .king, color: .white, figure: "s")
 
 
 
