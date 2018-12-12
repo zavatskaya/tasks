@@ -1,17 +1,16 @@
 import UIKit
 
-
 struct PlayerInChess {
     var name: String
-    var wins: UInt = 0
-    init(name: String){
-        self.name = name
+    var wins: UInt
+    func description(){
+        print("Игрок \(self.name) имеет \(self.wins) побед")
     }
 }
-var oleg = PlayerInChess(name: "Олег")
-oleg.name
-var mark = PlayerInChess(name: "Марк")
-mark.name
+var oleg = PlayerInChess(name: "Олег", wins: 15)
+oleg.description()
+
+
 
 /*https://www.codewars.com/kata/52fb87703c1351ebd200081f
 func whatCentury(_ year: String) -> String {
