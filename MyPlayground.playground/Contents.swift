@@ -1,12 +1,15 @@
 import UIKit
 
-enum e1 {
-    case q1
-    case q2
+
+struct PlayerInChess {
+    var name = ""
+    var wins: UInt = 0
 }
-
-
-
+var oleg = PlayerInChess(name: "Олег", wins: 32)
+var maks = PlayerInChess()
+oleg.name
+oleg.wins = 45
+oleg.wins
 
 
 
