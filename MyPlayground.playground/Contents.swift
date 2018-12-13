@@ -24,9 +24,21 @@ struct Chessmen {
         self.coordinates = coordinates != nil ? coordinates : nil
         print(figure, color, coordinates!)
     }
+    mutating func setCoordina­tes(_ a1: String, _ a2: UInt){
+        self.coordinates = (a1, a2)
+        print("coordinates are \(coordinates!)")
+    }
+    
+    mutating func kill() {
+        self.coordinates = nil
+        print("\(color) \(figure) was killed")
+    }
 }
 var figure1 = Chessmen (figure: .bishop, color: .black, coordinates: ("A", 8))
-
+figure1.setCoordina­tes("D", 3)
+print(figure1.coordinates!)
+figure1.kill()
+print(figure1.coordinates)
 
 /*https://www.codewars.com/kata/52fb87703c1351ebd200081f
 func whatCentury(_ year: String) -> String {
