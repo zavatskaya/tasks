@@ -1,13 +1,29 @@
 import UIKit
 
-class AboutMan {
-    var firstname = "Petya"
-    var surname = "Ivanov"
-    var fullname: String {return firstname + " " + surname}
+struct Circle {
+    var coordinates: (x: Int, y: Int)
+    var radius: Float {
+        willSet (newRadius) {
+            print("Вместо значения \(self.radius) устанавливается значение \(newRadius)")
+        }
+        didSet (oldRadius) {
+            print("Вместо значения \(oldRadius) установлено значение \(self.radius)")
+        }
+    }
+    var perimeter: Float {
+        get {
+            return 2 * 3.14 * self.radius
+        }
+        set {
+           self.radius = newValue / (2 * 3.14)
+        }
+    }
 }
 
-var me = AboutMan()
-me.fullname
+var obj = Circle (coordinates: (1, 0), radius: 10)
+obj.perimeter
+obj.perimeter = 31.4
+obj.radius
 
 /*https://www.codewars.com/kata/52fb87703c1351ebd200081f
 func whatCentury(_ year: String) -> String {
