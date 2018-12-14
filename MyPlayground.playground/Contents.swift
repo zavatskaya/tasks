@@ -25,6 +25,39 @@ obj.perimeter
 obj.perimeter = 31.4
 obj.radius
 
+
+
+struct AudioChannel {
+    static var maxValue = 5
+    var value: Int {
+        didSet {
+            if value > AudioChannel.maxValue {
+                value = AudioChannel.maxValue
+                print(value)
+                print(AudioChannel.maxValue)
+            }
+        }
+    }
+}
+
+var leftVolume = AudioChannel(value: 2)
+var rightVolume = AudioChannel(value: 3)
+leftVolume.value
+leftVolume.value = 6
+leftVolume.value
+AudioChannel.maxValue = 10
+AudioChannel.maxValue
+leftVolume.value = 9
+leftVolume.value
+
+
+
+
+
+
+
+
+
 /*https://www.codewars.com/kata/52fb87703c1351ebd200081f
 func whatCentury(_ year: String) -> String {
     var y = Double(year)!
