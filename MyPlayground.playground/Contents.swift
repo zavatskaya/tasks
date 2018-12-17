@@ -51,11 +51,35 @@ leftVolume.value = 9
 leftVolume.value
 
 
+class Quadruped {
+    var type = ""
+    var name = ""
+    func walk(){
+        print("walk")
+    }
+}
 
+class Dog: Quadruped {
+    func bark(){
+        print("woof")
+    }
+}
 
+class NoisyDog: Dog{
+    override func bark(){
+        for _ in 1...3 {
+            super.bark()
+        }
+    }
+}
 
+var dog = Dog()
+dog.type = "dog"
+dog.walk()
+dog.bark()
 
-
+var badDog = NoisyDog()
+badDog.bark()
 
 
 /*https://www.codewars.com/kata/52fb87703c1351ebd200081f
