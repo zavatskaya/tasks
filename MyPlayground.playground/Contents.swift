@@ -126,6 +126,27 @@ class Dogg: Quadruped {
 
 var d = Dogg(text: "hello, it's me")
 
+
+
+class Rectangle {
+    var height: Int
+    var weight: Int
+    init? (height h: Int, weight w: Int) {
+        self.height = h
+        self.weight = w
+        if (h < 0 || w < 0) {
+            return nil
+        }
+    }
+}
+
+var r = Rectangle(height: 12, weight: -12)
+
+
+
+
+
+
 /*https://www.codewars.com/kata/52fb87703c1351ebd200081f
 func whatCentury(_ year: String) -> String {
     var y = Double(year)!
