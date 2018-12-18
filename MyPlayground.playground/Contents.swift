@@ -108,6 +108,24 @@ for thing in things {
 }
 
 
+class Dogg: Quadruped {
+    override init() {
+        super.init()
+        self.type = "dog"
+    }
+    
+    convenience init(text: String) {
+        self.init()
+        print(text)
+    }
+    
+    func bark() {
+        print("woof")
+    }
+}
+
+var d = Dogg(text: "hello, it's me")
+
 /*https://www.codewars.com/kata/52fb87703c1351ebd200081f
 func whatCentury(_ year: String) -> String {
     var y = Double(year)!
