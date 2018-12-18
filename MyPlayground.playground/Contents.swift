@@ -163,6 +163,28 @@ enum TempUnit {
 let f = TempUnit(symbol: "F")
 
 
+class superclass {
+    init? (isNil: Bool) {
+        if isNil == true {
+            return nil
+        } else {
+            print("экземпляр создан")
+        }
+    }
+    deinit {
+        print("деинициализатор суперкласса")
+    }
+}
+
+class subclass: superclass {
+    deinit {
+        print("деинициализатор подкласса")
+    }
+}
+
+var a = subclass(isNil: true)
+a = nil
+
 
 
 /*https://www.codewars.com/kata/52fb87703c1351ebd200081f
