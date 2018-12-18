@@ -144,6 +144,24 @@ var r = Rectangle(height: 12, weight: -12)
 
 
 
+enum TempUnit {
+    case Kelvin, Celsius, Fahrenheit
+    init? (symbol: Character) {
+        switch symbol {
+        case "K":
+            self = .Kelvin
+        case "C":
+            self = .Celsius
+        case "F":
+            self = .Fahrenheit
+        default:
+            return nil
+        }
+    }
+}
+
+let f = TempUnit(symbol: "F")
+
 
 
 
