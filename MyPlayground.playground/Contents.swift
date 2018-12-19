@@ -200,6 +200,22 @@ let threeFeet = 3.ft
 print("3 футра это \(threeFeet) метра")
 
 
+struct Line {
+    var firstPoint: (Double, Double)
+    var secondPoint: (Double, Double)
+}
+
+extension Double {
+    init(line: Line) {
+        self = sqrt(pow((line.secondPoint.0 - line.firstPoint.0), 2) + pow(line.secondPoint.1 - line.firstPoint.1, 2))
+    }
+}
+
+var myLine = Line (firstPoint: (10, 10), secondPoint: (14, 10))
+var length = Double(line: myLine)
+
+
+
 /*https://www.codewars.com/kata/52fb87703c1351ebd200081f
 func whatCentury(_ year: String) -> String {
     var y = Double(year)!
