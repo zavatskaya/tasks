@@ -228,6 +228,19 @@ extension Int {
 }
 
 
+protocol TextRepresentable {
+    func asText() -> String
+}
+
+extension Int: TextRepresentable {
+    func asText() -> String {
+        return String(self)
+    }
+}
+
+5.asText()
+
+
 /*https://www.codewars.com/kata/52fb87703c1351ebd200081f
 func whatCentury(_ year: String) -> String {
     var y = Double(year)!
