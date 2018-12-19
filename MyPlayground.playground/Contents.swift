@@ -215,6 +215,18 @@ var myLine = Line (firstPoint: (10, 10), secondPoint: (14, 10))
 var length = Double(line: myLine)
 
 
+extension Int {
+    func repititions(task: () -> ()) {
+        for _ in 0..<self {
+            task()
+        }
+    }
+}
+
+5.repititions {
+    print("text")
+}
+
 
 /*https://www.codewars.com/kata/52fb87703c1351ebd200081f
 func whatCentury(_ year: String) -> String {
