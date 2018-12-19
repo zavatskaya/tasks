@@ -228,6 +228,8 @@ extension Int {
 }
 
 
+
+
 protocol TextRepresentable {
     func asText() -> String
 }
@@ -239,6 +241,30 @@ extension Int: TextRepresentable {
 }
 
 5.asText()
+
+
+
+protocol Named {
+    var name: String {get}
+}
+
+protocol Aged {
+    var age: Int {get}
+}
+
+struct Person: Named, Aged {
+    var name: String
+    var age: Int
+}
+
+func happyBDay (celebrator: Named & Aged) {
+    print("С днем рождения, \(celebrator.name), тебе уже \(celebrator.age) лет!")
+}
+
+let person = Person(name: "Катя", age: 20)
+happyBDay(celebrator: person)
+
+
 
 
 /*https://www.codewars.com/kata/52fb87703c1351ebd200081f
